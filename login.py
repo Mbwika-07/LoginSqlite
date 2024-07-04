@@ -79,8 +79,14 @@ def signup(connection):
         password = input("Enter your password: ")
             
         database.add_user(connection, username, email, password)
+        print("USE ADDED SUCCESSFULLY.")
     elif choice_two == "2":
-        print("Admin login coming soon")
+        username = input("Enter your username: ")
+        email = input("Enter your email: ")
+        password = input("Enter your password: ")
+            
+        database.add_admin(connection, username, email, password)
+        print("ADMIN ADDED SUCCESSFULLY.")
     else:
         print("INVALID SELECTION. PLEASE TRY AGAIN.")
 
