@@ -73,18 +73,18 @@ def signup(connection):
     print("2. ADMIN")
     choice_two = input("Your choice: ")
     
+    username = input("Enter your username: ")
+    if database.check_user_exists(connection, username):
+        print("Username already taken. Please try a different username.")
+        return
+
+    email = input("Enter your email: ")
+    password = input("Enter your password: ")
+
     if choice_two == "1":
-        username = input("Enter your username: ")
-        email = input("Enter your email: ")
-        password = input("Enter your password: ")
-            
         database.add_user(connection, username, email, password)
-        print("USE ADDED SUCCESSFULLY.")
+        print("USER ADDED SUCCESSFULLY.")
     elif choice_two == "2":
-        username = input("Enter your username: ")
-        email = input("Enter your email: ")
-        password = input("Enter your password: ")
-            
         database.add_admin(connection, username, email, password)
         print("ADMIN ADDED SUCCESSFULLY.")
     else:
@@ -119,7 +119,7 @@ def main():
             print("INVALID SELECTION. PLEASE TRY AGAIN.")
             
         
-        connection.close()
+    connection.close()
 
 if __name__ == "__main__":
     main()
