@@ -10,6 +10,7 @@ insert_users = "INSERT INTO users (username, email, password) VALUES (?, ?, ?);"
 insert_admins = "INSERT INTO admins (username, email, password) VALUES (?, ?, ?);"
 
 
+
 get_all_users = "SELECT * FROM users;"
 
 get_all_admins = "SELECT * FROM admins;"
