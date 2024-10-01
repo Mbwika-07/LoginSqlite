@@ -66,6 +66,8 @@ def login(connection):
     else:
         print("INVALID SELECTION. PLEASE TRY AGAIN.")
 
+
+
 def signup(connection):
     
     print("HOW WOULD YOU WISH TO CREATE YOUR ACCOUNT IN THE PROGRAM AS; ")
