@@ -70,6 +70,8 @@ def find_admin_by_name(connection, name):
         return connection.execute(get_admin_by_name, (name)).fetchall()
 
 
+
+
     
 def verify_user(connection, username, password):
     with connection:
