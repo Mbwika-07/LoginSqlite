@@ -61,6 +61,11 @@ def find_all_admins(connection):
 
 
 
+
+
+
+
+
 def find_user_by_name(connection, name):
     with connection:
         return connection.execute(get_user_by_name, (name)).fetchall()
